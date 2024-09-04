@@ -1,0 +1,136 @@
+:root {
+    --bg-main: #F5EEE6;      /* Light Beige for the main background */
+    --bg-highlight: #FFF8E3; /* Cream for subtle highlights */
+    --accent-soft: #F3D7CA;  /* Soft Pink for buttons or special sections */
+    --accent-strong: #E6A4B4; /* Rose Pink for headers and important elements */
+    --text-light: #FFFFFF;   /* White for text on darker backgrounds */
+    --text-dark: #000000;    /* Black for text on lighter backgrounds */
+    --accent-dark: #4B2E2D;  /* Dark Brown for footer, borders, or accents */
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--bg-main);
+    color: var(--accent-dark);
+    font-size: 16px;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .header {
+    background-color: var(--accent-strong);
+    color: var(--text-light);
+    box-shadow: 0 2px 4px var(--shadow);
+    padding: 10px 20px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    background-color: var(--accent-soft);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+}
+
+#content {
+    padding: 20px;
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cta-button {
+    background-color: var(--accent-soft);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+}
+
+.about, .timing, .location {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: var(--accent-strong);
+}
+
+footer {
+    background-color: var(--accent-strong);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px 20px;
+}
